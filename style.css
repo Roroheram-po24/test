@@ -1,0 +1,284 @@
+/*-- 共通部分 --*/
+body {
+    margin: 0;
+}
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+a {
+    color: black;
+    text-decoration: none
+}
+a:hover {
+    opacity: 0.5;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/*-- ヘッダー --*/
+header {
+    background: #efefef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.header-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header-nav-left input {
+    width: 350px;
+    height: 30px;
+    border: none;
+}
+.header-nav-left input:focus {
+    outline: none;
+}
+.header-nav-left div {
+    background: white;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+.header-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 13px;
+}
+.header-nav-right i {
+    font-size: 20px;
+}
+
+.top-banner {
+    height: 30px;
+    background-image: url(https://placehold.jp/500x30.png);
+}
+
+/*-- タブ --*/
+.tab {
+    background: #efefef;
+    text-align: center;
+}
+.tab a {
+    display: inline-block;
+    width: 300px;
+    padding: 15px 0;
+    font-weight: bold;
+    color: #a0a0a0;
+}
+.tab a:nth-of-type(1) {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+/*-- カテゴリー --*/
+.category-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 25px auto;
+}
+.category {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.category i {
+    margin-right: 5px;
+}
+.category a:nth-of-type(1) {
+    background: #efefef;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+.category a:nth-of-type(2) {
+    color: #0064d8;
+}
+.category a:nth-of-type(3) {
+    color: #f26868;
+}
+.category a:nth-of-type(4) {
+    color: #f6ca55;
+}
+.category-wrapper > a {
+    color: lightgray;
+}
+
+.carusel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.carusel img {
+    border-radius: 15px;
+}
+
+/*-- コンテンツ部分 --*/
+.contents-wrapper {
+    background: #f8f8f8;
+}
+.contents {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.side {
+    width: 25%;
+}
+.main {
+    width: 70%;
+}
+
+/*-- サイドメニュー --*/
+.side-menu {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+}
+.side-menu a {
+    display: block;
+    padding: 5px 0;
+    width: 100%;
+}
+
+/*-- メインコンテンツ --*/
+.main-banner img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.main section {
+    margin-bottom: 50px;
+}
+/* カード */
+.item-card {
+    display: block;
+    background: white;
+    width: 200px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.item-card p {
+    margin: 3px 10px;
+    font-size: 15px;
+}
+.item-card .brand {
+    font-weight: bold;
+}
+.item-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.item-card .color {
+    color: gray;
+    font-size: 10px;
+}
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*-- おまけ --*/
+
+/* 矢印付きメニュー */
+.side-menu .arrow {
+    position: relative;
+}
+.side-menu .arrow::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -4px;
+    transform: rotate(45deg);
+}
+
+/* ポップアップメニュー */
+.sub-menu {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+    width: 200px;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    top: 0;
+    left: 100%;
+    padding: 10px;
+}
+.side-menu .arrow:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* フッター */
+footer {
+    background: #efefef;
+    padding: 50px 0;
+    color: gray;
+    font-size: 12px;
+}
+footer a {
+    color: gray;
+}
+.footer-wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+.footer-nav ul {
+    border-right: 1px solid lightgray;
+    width: 180px;
+    padding-left: 30px;
+}
+.footer-nav ul:first-child,
+.info li:first-child {
+    padding-left: 0;
+}
+.footer-nav ul:last-child,
+.info li:last-child {
+    border: none;
+}
+.info ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.info li {
+    border-right: 1px solid lightgray;
+    width: 150px;
+    padding-left: 30px;
+}
+.info i {
+    margin-left: 10px;
+}
